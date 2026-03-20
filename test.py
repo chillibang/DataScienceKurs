@@ -1,18 +1,14 @@
-transactions = [
-    ('food', 50),
-    ('transport', 20),
-    ('food', 30),
-    ('entertainment', 40),
-    ('transport', 15),
-    ('food', 25)
+# Zadanie 14 -lekcja 5
+
+models = [
+    ('Logistic Regression', 0.78, 1.2),
+    ('Random Forest', 0.92 , 45.6),
+    ('SVM', 0.85, 12.3),
+    ('XGBoost', 0.95, 67.8)
 ]
 
-total = {}
-
-for category, value in transactions:
-    if category in total:
-        total[category] += value
-    else:
-        total[category] = value
-
-print(total)
+# Sortowanie modeli według dokładności (accuracy)
+sorted_by_accuracy = sorted(models, key=lambda x: x[1], reverse=True)
+print("Modele posortowane według dokładności:")
+for models in sorted_by_accuracy:
+    print(models)
